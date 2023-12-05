@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% set box_size= scroll_menu["box_size"] %}
+<style>
+.carousel-cell {cursor: pointer;text-align:center;width: {{box_size}}px;height: {{box_size}}px;margin-right: 20px !important;border-radius: 8px;counter-increment: carousel-cell;border:{{scroll_menu["box_border"]}}}
+.carousel{margin-top:10px !important;width:100%;max-width:1150px;margin:0 auto;}
+.fflickity-prev-next-button.previous{left:-50px !important}
+.flickity-prev-next-button.next{right:-50px !important;}
+.carousel-cell:hover{    background-color: var(--sidebar-select-color) !important;}
+.icon-size{
+{% if  scroll_menu.only_icons %}
+	height:80% !important;margin-top:10%;
+{% else %}
+	height:70% !important;
+{% endif %}
+}
+</style>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<div class="carousel {% if  scroll_menu.only_at_home %}carousel-custom{% endif %}" style="background-color:var(--bg-color);" data-flickity='{ "freeScroll": true, "wrapAround": true ,"pageDots": false}'>
+
+    {% for m in scroll_menu["modules"] %}
+
+        <div id="{{m.title}}" class=" {% if m.title=='Home'%} home-module {% else %} normal-module {% endif %}carousel-cell nameSystem " style="background-colorr:var(--fg-color);">
+
+                <a style="background-color:transparent !important; margin-bottom:0px !important;width:{{box_size}}px !important;height:{{box_size}}px !important;"href="{% if m.public %}{{'/app/'}}{% else %}{{'/app/private/'}}{% endif %}{{m.title|lower|replace(" ","-")}}" title="{{_(m.title)}}"> 
+			{% if m.image %}
+				<img class="icon-size" src="{{m.image}}" style=""  alt=""> 
+			{% else %}
+			<span class="sidebar-item-icon" item-icon="{{m.icon or 'folder-normal'}}"><svg class="icon  icon-md icon-size" style="width:80% !important;">
+				<use class="" href="#icon-{{m.icon or 'folder-normal'}}"></use>
+			</svg></span>
+			{% endif %}
+		</a>
+		{% if not scroll_menu.only_icons %}<br><span>{{_(m.title)}}</span> {% endif %}
+
+
+        </div>
+
+    {% endfor %}
+
+</div>
+<div id='theme' style="display:none;">{{desk_theme.lower()}}</div>

@@ -1,0 +1,7 @@
+{
+    "js/theme.min.js": [
+		"public/js/custom_navbar.html",
+		"public/js/custom_navbar.js"
+
+	]
+}

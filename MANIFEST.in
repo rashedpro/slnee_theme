@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include slnee_theme *.css
+recursive-include slnee_theme *.csv
+recursive-include slnee_theme *.html
+recursive-include slnee_theme *.ico
+recursive-include slnee_theme *.js
+recursive-include slnee_theme *.json
+recursive-include slnee_theme *.md
+recursive-include slnee_theme *.png
+recursive-include slnee_theme *.py
+recursive-include slnee_theme *.svg
+recursive-include slnee_theme *.txt
+recursive-exclude slnee_theme *.pyc

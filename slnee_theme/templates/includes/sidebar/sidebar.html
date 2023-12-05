@@ -1,0 +1,56 @@
+<div class="layout-side-section" id="top-sidebar">
+{% if layout_direction=="rtl"%}
+{% set open="sidebar-collapse"%}
+{% set close="sidebar-expand" %}
+{% else %}
+{% set close="sidebar-collapse"%}
+{% set open="sidebar-expand" %}
+{% endif %}
+<div id="sidebar"  class="list-sidebar overlay-sidebar  overlay-sidebar-custom  hidden-xs hidden-sm">
+				<div class="desk-sidebar list-unstyled sidebar-menu-custom"><div class="standard-sidebar-section nested-container hidden" data-title="My Workspaces"><div class="standard-sidebar-label">
+			<span><svg class="icon  icon-xs" style="">
+			<use class="" href="#icon-small-down"></use>
+		</svg></span>
+			</div></div><div id="sidebar-custom" class="standard-sidebar-section nested-container" data-title="Public">
+                    <div class="sidebar-item sidebar-item-container is-draggable" item-parent="" item-name="Home" item-public="1">
+				<div class="desk-sidebar-item standard-sidebar-item-toggle">
+					<span class="item-anchor align-custom" title="Home">
+
+				<span class="sidebar-item-icon sidebar-item-icon-custom" id="opensidebar" style="cursor: pointer;" item-icon="{{open}}"><svg class="icon  icon-md" style="margin-left:-6px;width:30px;height:30px;">
+					<use class="" href="#icon-{{open}}"></use>
+				</svg></span>
+				<span class="sidebar-item-icon sidebar-item-icon-custom" id="closesidebar" style="display:none;cursor: pointer;" item-icon="{{close}}"><svg class="icon  icon-md" style="margin-left:-6px;width:30px;height:30px;">
+					 <use class="" href="#icon-{{close}}"></use>
+				</svg></span>				
+				<a id="module-name-a"><span id="module-name" class="item-original" style="font-size:16px;font-weight:bold;"></span></a>
+				<input class="item-editing" type="text" id="module-name-edit" name="module-name" style="width:120px;font-size:18px;background:transparent;border: dotted 1px black;display:none;">
+					<span class="sidebar-item-icon sidebar-item-icon-custom" id="edit-sidebar" style="display:none;cursor: pointer;" item-icon="edit"><svg class="icon  icon-md" style="width:25px;height:25px;">
+						<use class="" href="#icon-edit"></use>	</svg></span>	
+					<span class="sidebar-item-icon sidebar-item-icon-custom" id="save-sidebar" style="display:none;cursor: pointer;"item-icon="check"><svg class="icon  icon-md" style="width:25px;height:25px;">
+						<use class="" href="#icon-check"></use>  </svg></span>	
+					</span></span></span>
+				</div>
+				<div class="sidebar-child-item nested-container"></div>
+			</div>
+<div class="sidebar-child-item nested-container"></div>
+			</div></div>
+<div class="sidebar-item-container- is-draggable" item-parent="" style="position:fixed;bottom:20px;" item-name="Home" item-public="1">
+	<div class="desk-sidebar-item standard-sidebar-item standard-sidebar-item-custom" id="logout-custom">
+		<span class="item-anchor align-custom" title="LogOut">
+			<span class="sidebar-item-icon sidebar-item-icon-custom" item-icon="reply-all"><svg class="icon  icon-md" style="width:35px;height:35px;">
+				<use class="" href="#icon-reply-all"></use>
+				</svg></span><span class="sidebar-item-label" style="font-size:18px;"><span>
+				
+
+
+			</span></span></span></div>	</div>
+</div></div>
+
+</div>
+    </div>
+
+
+
+<span style="display:none;position:fixed;top:10px;left:10px;z-index:9999" item-icon="menu"><svg class="icon  icon-md" style="">
+	<use class="" href="#icon-menu"></use>
+</svg></span>

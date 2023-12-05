@@ -1,0 +1,122 @@
+.flickity-viewport{
+	margin-top:10px;
+}
+.chart-container .axis line{
+	stroke:#bcbcbc !important;
+}
+
+.page-title .title-area .title-text{
+	font-size:30px;
+}
+
+.page-head{margin-bottom: 0px !important;}
+.navbar .container{border-bottom:solid 2px #99b2a8;}
+
+.layout-main-section-wrapper{
+	overflow-y:unset !important;
+}
+
+.llayout-main-section {
+	background-color: #d4e2e2 !important;
+}
+.widget.shortcut-widget-box .indicator-pill{
+height:30px;
+font-size:20px;
+}
+
+.widget .widget-head .widget-label .widget-title{
+	font-size:17px !important;
+}
+.layout-side-section {
+	display:none;
+}
+#top-sidebar{
+	display:block !important;
+}
+
+.sidebar-toggle-btn{
+	display:none !important;;
+}
+
+.app-logo{
+	max-height:1000px !important;
+}
+
+.layout-side-section .overlay-sidebar-custom {
+    margin-top: 0!important;
+    position: fixed;
+    background: var(--fg-color);
+    top: 0;
+    z-index: 9999;
+    box-shadow: var(--shadow-base);
+    height: 100%;
+    width: 70px;
+    display: block!important;
+    transition: transform .2s ease-in-out;
+    padding: var(--padding-md);
+    overflow-x:hidden;
+}
+.standard-sidebar-item-toggle{
+	padding:4px 12px 20px;
+	width:112%;
+}
+.standard-sidebar-item-custom{
+	cursor:pointer;
+}
+.layout-side-section .overlay-sidebar.opened-custom {
+    transform: translateX(0);
+    overflow-y: auto;
+}
+.align-custom{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.sidebar-icon{
+	width:30px;
+	height:30px;
+	margin-left:-3px;
+}
+.desk-sidebar-item-custom{
+	padding :8px 8px !important;;
+}
+.sidebar-toggle-btn{
+	display:none;
+}
+.big-blue{
+	background-color: "#0000ff";
+}
+
+.sidebar-menu{
+	display:none;
+}
+.layout-side-section-custom{
+	height: 100%;
+	overflow-y: auto;
+
+}
+.child-items{
+	border:solid 2px #a59898;
+	background-color:white !important;
+	height:100%;
+	top:0;
+	width:200px;
+	padding-top:20px;
+}
+
+.sidebar-title{
+	width:100%;
+	padding-top:20px;
+	padding-bottom:50px;
+	text-align:center;
+	font-size:18px;
+}
+.sidebar-child{
+	font-size:15px;
+	padding-top:10px !important;
+}
+.sidebar-item-custom{
+	border-radius:5px;
+}
+.sidebar-item-custom:hover{
+	border:solid 1px gray;
+}

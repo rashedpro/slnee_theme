@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% set box_size= scroll_menu["box_size"] %}
+<style>
+.carousel-cell {cursor: pointer;text-align:center;width: {{box_size}}px;height: {{box_size}}px;margin-right: 20px !important;border-radius: 8px;counter-increment: carousel-cell;border:{{scroll_menu["box_border"]}}}
+.carousel{margin-top:10px;width:90%;margin-left:5%;}
+.carousel-cell:hover{    background-color: var(--sidebar-select-color) !important;}
+{% if scroll_menu.only_icons %}
+	.icon-size{height:70%;margin-top:10%;}
+{% else %}
+	.icon-size{height:70%;margin-top:10%;{}
+{% endif %}
+</style>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<div class="carousel" style="background-color:var(--bg-color);" data-flickity='{ "freeScroll": true, "wrapAround": true ,"pageDots": false}'>
+
+    {% for m in scroll_menu["modules"] %}
+
+        <div id="{{m.title}}" class=" {% if m.title=='Home'%} home-module {% else %} normal-module {% endif %}carousel-cell nameSystem " style="background-colorr:var(--fg-color);">
+
+                <a style="background-color:transparent !important; margin-bottom:0px !important;width:{{box_size}}px !important;height:{{box_size}}px !important;"href="{% if m.public %}{{'/app/'}}{% else %}{{'/app/private/'}}{% endif %}{{m.title|lower|replace(" ","-")}}" title="{{m.title}}"> 
+			{% if m.image %}
+				<img src="{{m.image}}" style="width:80%;margin-top:10% !important;"  alt=""> 
+			{% else %}
+			<span class="sidebar-item-icon icon-size" item-icon="{{m.icon or 'folder-normal'}}"><svg class="icon  icon-md" style="width:80% !important;">
+				<use class="" href="#icon-{{m.icon or 'folder-normal'}}"></use>
+			</svg></span>
+			{% endif %}
+		</a>
+		{% if not scroll_menu.only_icons %}<br><span>{{ m.title}}</span> {% endif %}
+
+
+        </div>
+
+    {% endfor %}
+
+</div>
+<div id='theme' style="display:none;">{{desk_theme.lower()}}</div>
